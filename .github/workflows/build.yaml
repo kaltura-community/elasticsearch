@@ -1,0 +1,13 @@
+name: 'Build & Push Docker Image'
+on:
+  push:
+    branches:
+    - main
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    uses: kaltura-community/ci-pipelines/.github/workflows/container-publish.yaml@main
